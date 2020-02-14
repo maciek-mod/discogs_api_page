@@ -6,10 +6,12 @@ import * as actions from '../store/actions/homePage';
 class homePage extends React.Component {
 
     componentDidMount() {
-        // this.props.getArtist();
+        this.props.getHomePageStart();
     }
 
     render() {
+        console.log(this.props);
+        
         return(
             <>
                 Home Page
@@ -27,7 +29,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getArtist: () => dispatch(actions.getArtist())
+        // getArtist: () => dispatch(actions.getArtist())
+        getHomePageStart: () => dispatch(actions.getHomePageStart())
     }
 }
 

@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app.js';
+import App from './app.js'; 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './store/reducers';
-import thunk from 'redux-thunk';
+import thunk from 'redux-thunk'; 
+import createSagaMiddleware from 'redux-saga';
+import  rootSaga  from './store/rootSaga/rootSaga';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(
+	rootReducer, 
+	// applyMiddleware(thunk),
+	applyMiddleware(sagaMiddleware)
+);
+sagaMiddleware.run(rootSaga);
+
 
 ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));  
