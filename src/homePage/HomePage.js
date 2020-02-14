@@ -6,7 +6,7 @@ import * as actions from '../store/actions/homePage';
 class homePage extends React.Component {
 
     componentDidMount() {
-        this.props.getArtist();
+        // this.props.getArtist();
     }
 
     render() {

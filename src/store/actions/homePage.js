@@ -24,24 +24,19 @@ export function getHomePageError(error) {
     }
 }
 
-
 export function getArtist(artisName) {
 
     return (dispatch) => {
         dispatch(getHomePageStart());
-        fetch('https://api.discogs.com/database/search?q=PUSH&type=artist', {
-            method: "GET",
-            mode: 'no-cors',
-            headers: {
-              'Authorization': 'lFQYCXtZygPbdDQpLRUCEaTYattQSgqCbUZGXMhV'
-            }
-        })
+        fetch(`https://api.discogs.com/database/search?q=PUSH&key=CdvsbTeYizKEhAlIlsgw&secret=hQFqliSpdhweVGOrzJgEgqBgAXVHMsun&type=artist`)
         .then(response => response.json())
         .then(data => {
             dispatch(getHomePageSuccess(data))
+            
         })
         .catch(error => dispatch(getHomePageError(
              error
         )));
     };
 }
+
