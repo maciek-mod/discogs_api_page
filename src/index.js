@@ -4,14 +4,12 @@ import App from './app.js';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './store/reducers';
-import thunk from 'redux-thunk'; 
 import createSagaMiddleware from 'redux-saga';
 import  rootSaga  from './store/rootSaga/rootSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
 	rootReducer, 
-	// applyMiddleware(thunk),
 	applyMiddleware(sagaMiddleware)
 );
 sagaMiddleware.run(rootSaga);

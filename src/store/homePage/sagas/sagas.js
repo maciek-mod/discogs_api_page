@@ -1,7 +1,8 @@
 import * as actions from "../actions/homePage";
+import * as constants from '../constants';
 import { call, put, takeEvery } from "redux-saga/effects";
 
-export function* getData() {
+export function* getData() { 
     try {
         const response = yield call(
             fetch,
@@ -15,5 +16,5 @@ export function* getData() {
 }
 
 export function* getDataSaga() {
-    yield takeEvery(actions.HOMEPAGE_GET_START, getData);
+    yield takeEvery(constants.HOMEPAGE_GET_START, getData);
 }

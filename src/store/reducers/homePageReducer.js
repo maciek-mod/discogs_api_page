@@ -1,4 +1,4 @@
-import * as constants from '../constants'; 
+import * as constants from '../homePage/constants'; 
 
 const initialState = {
     data: null,

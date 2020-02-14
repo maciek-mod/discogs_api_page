@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../store/actions/homePage';
+import * as actions from '../store/homePage/actions/homePage';
 
 
 class homePage extends React.Component {
@@ -10,8 +10,6 @@ class homePage extends React.Component {
     }
 
     render() {
-        console.log(this.props);
-        
         return(
             <>
                 Home Page
@@ -29,7 +27,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // getArtist: () => dispatch(actions.getArtist())
         getHomePageStart: () => dispatch(actions.getHomePageStart())
     }
 }
