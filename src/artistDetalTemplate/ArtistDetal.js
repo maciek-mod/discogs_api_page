@@ -1,11 +1,6 @@
 import React from 'react';
-// import {connect} from './node_modules/react-redux';
-// import * as actions from '../store/homePage/actions/homePage';
 
-
-class artistDetal extends React.Component {
-    // componentDidMount() { 
-    // }
+class ArtistDetal extends React.Component {
 
     render() {
         return(
@@ -17,5 +12,5 @@ class artistDetal extends React.Component {
 };
 
 
-export default artistDetal;
+export default ArtistDetal;
 

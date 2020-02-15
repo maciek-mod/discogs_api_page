@@ -6,24 +6,19 @@ import HomePageList from './homePageList';
 
 class homePage extends React.Component {
 
-    componentDidMount() {
-        // this.props.getHomePageStart("M.I.K.E");
-    }
-
-    getArtistName = (event) => {
-        this.props.homePageStore.data = null;
+    getArtistName(event){
         event.preventDefault();
         const artistName = document.getElementById("artist_input").value;
         this.props.getHomePageStart(artistName);
-    }
+    } 
 
     render() {
-        return(
+        return (
             <>
                 <h2>Search artist</h2>
                 <form>
                     <input id="artist_input" type="text" placeholder="artist" />
-                    <input type="submit" onClick={this.getArtistName} value="Search"></input>
+                    <input type="submit" onClick={this.getArtistName.bind(this)} value="Search" />
                 </form>
                 <HomePageList
                     artistList={this.props.homePageStore.data}

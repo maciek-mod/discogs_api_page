@@ -5,17 +5,17 @@ import ArtistDetal from './artistDetalTemplate/ArtistDetal';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-const App = () => {
-    return (
-        <Router>
-            <div className="content_page"> 
-                <Switch>
-                    <Route exact path="/" component={HomePage} />
-                    <Route path="/artist/:artistId" component={ArtistDetal}/>
-                </Switch>
-            </div>
-        </Router>
-    ); 
-}
+const App = () => (
+    <Router>
+        <div className="content_page"> 
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/artist/:artistId" component={ArtistDetal}/>
+            </Switch>
+        </div>
+    </Router>
+)
+
+
 
 export default App;
