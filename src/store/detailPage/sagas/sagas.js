@@ -7,7 +7,7 @@ export function* getData(action) {
     try {
         const response = yield call(
             fetch,
-            `https://api.discogs.com/artists/${id}`
+            `https://api.discogs.com/artists/${id}?key=CdvsbTeYizKEhAlIlsgw&secret=hQFqliSpdhweVGOrzJgEgqBgAXVHMsun`
         );
         const data = yield response.json(); 
         yield put(actions.getDetailPageSuccess(data));

@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../store/detailPage/actions/detailPage';
+import ArtistDetalDescriptionImg from './artistDetalDescriptionImg';
+
 
 class ArtistDetal extends React.Component {
 
@@ -12,7 +14,10 @@ class ArtistDetal extends React.Component {
     render() {
         return(
             <>
-               {this.props.match.params.artistId}
+                <ArtistDetalDescriptionImg 
+                    artistDescription={this.props.detailPageStore.data.profile}
+                    artistImages={this.props.detailPageStore.data.images}
+                />
             </>
         )
     }
