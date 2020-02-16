@@ -16,6 +16,6 @@ export function* getData(action) {
     }
 }
 
-export function* getDataSaga() {
+export function* getDataSagaHomePage() {
     yield takeEvery(constants.HOMEPAGE_GET_START, getData);
 }

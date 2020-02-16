@@ -1,8 +1,10 @@
-import { getDataSaga } from '../homePage/sagas/sagas';
-import { put, takeEvery, all } from 'redux-saga/effects'
+import { getDataSagaHomePage } from '../homePage/sagas/sagas';
+import { getDataSagaDetailPage } from '../detailPage/sagas/sagas';
+import { all } from 'redux-saga/effects'
 
 export default function* rootSaga() {  
   yield all([
-    getDataSaga()
+    getDataSagaHomePage(),
+    getDataSagaDetailPage()
   ]);
 } 
