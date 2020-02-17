@@ -1,0 +1,36 @@
+section.homePage{
+	.homePageHeading{
+		font-weight: 700;
+		padding-bottom: 30px;
+		@include flProperty("font-size", 18px, 36px, 320px, 1920px);
+	} 
+	.homePageForm{
+		padding-bottom: 30px;
+	}
+	.homePageSearchResult{
+		.homePageSearchResultList{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.homePageSearchResultItem{
+				flex-basis: 14%;
+				max-width: 150px;
+				padding-bottom: 15px;
+				a{
+					.img_wrapper{
+						padding-bottom: 5px;
+					}
+					display: inline-block;
+					text-align: center;
+					color: black;
+					text-decoration: none;
+					@include flProperty("font-size", 14px, 18px, 320px, 1920px);
+				}
+			}
+		}
+		.homePageSearchResultParagraf{
+			@include flProperty("font-size", 14px, 18px, 320px, 1920px);
+		}
+	}
+}
+

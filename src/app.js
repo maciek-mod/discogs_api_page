@@ -7,11 +7,13 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 const App = () => (
     <Router>
-        <div className="content_page"> 
-            <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route path="/artist/:artistId" component={ArtistDetal}/>
-            </Switch>
+        <div className="fhd_container">
+            <div className="hd_container"> 
+                <Switch>
+                    <Route exact path="/" component={HomePage} />
+                    <Route path="/artist/:artistId" component={ArtistDetal}/>
+                </Switch>
+            </div>
         </div>
     </Router>
 )

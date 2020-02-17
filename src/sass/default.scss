@@ -1,0 +1,15 @@
+@import "_variables.scss";
+@import "libs/_reset.scss";
+@import "libs/fonts.scss";
+@import "libs/mixin.scss";
+@import "libs/_buttons.scss"; 
+@import "libs/_typography.scss";
+
+@import "_grid.scss";
+@import "_general.scss"; 
+
+@import "inc/_site_header.scss";
+@import "inc/_site_footer.scss";
+@import "inc/_404_page.scss"; 
+@import "inc/_cookies.scss"; 
+@import "homepage/_homepage.scss";

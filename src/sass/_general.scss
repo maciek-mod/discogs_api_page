@@ -1,0 +1,55 @@
+html {
+    @include flFont($rem_base * 0.75, $rem_base, 1280px, 1440px);
+    // font-size: 100%;
+
+    /*
+        this mixin equals to:
+
+        body {
+            font-size: 7.5px;
+        }
+
+        @media screen and (min-width: 1440px){
+            body {
+                font-size: calc(7.5px + 2.5 * ((100vw - 1440px) / 480));
+            }
+        }
+        @media screen and (min-width: 1920px){
+            body {
+                font-size: 10px;
+            }
+        }
+    */
+}
+
+body {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+.img_wrapper {
+    display: inline-block;
+    img {
+        display: grid;
+        max-width: 100%;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+section.body_wrapper{
+    overflow: hidden;
+    .body_wrapper_flex{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
