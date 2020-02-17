@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../store/detailPage/actions/detailPage';
 import ArtistDetalDescriptionImg from './artistDetalDescriptionImg';
+import ArtistDetalReleases from './ArtistDetalReleases';
+
 
 
 class ArtistDetal extends React.Component {
@@ -9,14 +11,19 @@ class ArtistDetal extends React.Component {
     componentDidMount(){
         const id = this.props.match.params.artistId;
         this.props.getDetailPageStart(id);
+        this.props.getListReleasesStart(id);
     }
 
     render() {
+        console.log(this.props.detailPageStore.relases.releases);
         return(
             <>
                 <ArtistDetalDescriptionImg 
                     artistDescription={this.props.detailPageStore.data.profile}
                     artistImages={this.props.detailPageStore.data.images}
+                />
+                <ArtistDetalReleases 
+                    artistReleases={this.props.detailPageStore.relases.releases}
                 />
             </>
         )
@@ -31,7 +38,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getDetailPageStart: (id) => dispatch(actions.getDetailPageStart(id))
+        getDetailPageStart: (id) => dispatch(actions.getDetailPageStart(id)),
+        getListReleasesStart: (id) => dispatch(actions.getListReleasesStart(id))
     }
 }
 
