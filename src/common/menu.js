@@ -1,20 +1,12 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import stickyMenu from '../common/helpers'
 
 
 class Menu extends React.Component {
 
     componentDidMount() {
-        function scroll() {
-            let height = window.scrollY;
-            let menu = document.querySelector("header");
-            if (height > 60) {
-                menu.classList.add('slide');
-            } else {
-                menu.classList.remove('slide');
-            }
-        }
-        window.onscroll = scroll;
+        window.onscroll = stickyMenu;
     }
 
     render() {
