@@ -15,9 +15,8 @@ class ArtistDetal extends React.Component {
     }
 
     render() {
-        console.log(this.props.detailPageStore.relases.releases);
         return(
-            <>
+            <section className="artist_page">
                 <ArtistDetalDescriptionImg 
                     artistDescription={this.props.detailPageStore.data.profile}
                     artistImages={this.props.detailPageStore.data.images}
@@ -25,7 +24,7 @@ class ArtistDetal extends React.Component {
                 <ArtistDetalReleases 
                     artistReleases={this.props.detailPageStore.relases.releases}
                 />
-            </>
+            </section>
         )
     }
 };

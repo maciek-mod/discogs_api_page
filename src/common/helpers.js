@@ -9,3 +9,12 @@ export default function stickyMenu(){
         menu.classList.remove('slide');
     }
 }
+
+export function deleteLinkFromText(text){
+    let returnString = text;
+    if(text.indexOf("[a=") || text.indexOf("[l=")){
+        returnString = returnString.replace(/(\[a=)|(\[l=)|(\])/g, "");
+        return returnString;
+    }
+    return returnString;
+}

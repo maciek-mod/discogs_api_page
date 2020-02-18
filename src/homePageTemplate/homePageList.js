@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
 const HomePageList = (props) => (
+	
 	props.artistList ? (
 		<ul className="homepage_search_result_list">
 			{

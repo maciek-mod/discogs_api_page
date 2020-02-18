@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {deleteLinkFromText} from '../common/helpers'
 
 const ArtistDetalDescriptionImg = (props) => (
 	(
 		<>
-			<div>
-				{props && props.artistDescription ? props.artistDescription : null}
+			<div className="artist_page_text_wrapper">
+				{props && props.artistDescription ? 
+				<p className="description">{deleteLinkFromText(props.artistDescription)}</p>
+				: null}
 			</div>
-			<div>
+			<div className="artist_page_img_wrapper">
 				{props && props.artistImages ?
 					props.artistImages.map( (item, key) =>
                         (
-                            <img key={key} src={item.uri} alt="photoArtist" />
+                            <div key={key} className="img_wrapper"><img src={item.uri} alt="photoArtist" /></div>
                         )
 					)
 				: null}
