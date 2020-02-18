@@ -9,6 +9,7 @@
 .hd_container{
     width: 100%;
     max-width: calc(1366px + 4*#{$gutter}); 
+    padding: 0 $gutter;
     
     margin: 0 auto;
     @media (min-width: 1200px){
