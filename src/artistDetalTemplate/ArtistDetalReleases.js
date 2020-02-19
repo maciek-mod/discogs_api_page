@@ -23,8 +23,7 @@ const ArtistDetalReleases = (props) => (
 );
 
 ArtistDetalReleases.propTypes = { 
-	// artistDescription: PropTypes.string,
-	// artistImages: PropTypes.array
+	artistReleases: PropTypes.array
 };
 
 export default ArtistDetalReleases;
