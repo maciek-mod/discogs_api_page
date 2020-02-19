@@ -12,12 +12,10 @@ const ArtistDetalDescriptionImg = (props) => (
 			</div>
 			<div className="artist_page_img_wrapper">
 				{props && props.artistImages ?
-					props.artistImages.map( (item, key) =>
-                        (
-                            <div key={key} className="img_wrapper"><img src={item.uri} alt="photoArtist" /></div>
-                        )
-					)
-				: null}
+					props.artistImages.map( (item, key) => (
+                        <div key={key} className="img_wrapper"><img src={item.uri} alt="photoArtist" /></div>
+					))
+				: null }
 			</div>
 		</>
 	)

@@ -13,8 +13,7 @@ const ArtistDetalReleases = (props) => (
 								<p className="year_relases">Year - {item.year}</p>
 							</div>
 						</div>
-                        )
-					)
+					))
 				: null}
 			</div>
 		</>
