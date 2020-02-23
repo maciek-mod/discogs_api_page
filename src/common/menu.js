@@ -17,6 +17,7 @@ class Menu extends React.Component {
                     <ul className="menu_ul_wrapper">
                         <li>
                             <NavLink exact to="/">Home</NavLink>
+                            <NavLink exact to="/about">About</NavLink>
                         </li>
                     </ul>
                 </div>
