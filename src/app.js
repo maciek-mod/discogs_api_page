@@ -1,6 +1,7 @@
 import React from 'react';
 import HomePage from './homePageTemplate/HomePage';
 import ArtistDetal from './artistDetalTemplate/ArtistDetal';
+import AboutPage from './aboutPage/aboutPage';
 import Menu from './common/menu';
 
 
@@ -15,6 +16,7 @@ const App = () => (
                 <Switch>
                     <Route exact path="/" component={HomePage} />
                     <Route path="/artist/:artistId" component={ArtistDetal}/>
+                    <Route path="/about" component={AboutPage}/>
                 </Switch>
             </div>
         </div>
