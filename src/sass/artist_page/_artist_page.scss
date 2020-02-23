@@ -1,0 +1,50 @@
+section.artist_page{
+	.artist_page_text_wrapper{
+		.description{
+			line-height: 1.4;
+			padding-bottom: 30px;
+			@include flProperty("font-size", 16px, 20px, 320px, 1920px);
+		}
+	}
+	.artist_page_img_wrapper{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.img_wrapper{
+			text-align: center;
+			margin-bottom: $gutter;
+			flex-basis: 30%;
+			max-width: 30%;
+			img{
+				margin: 0 auto;
+			}
+		}
+	}
+	.artis_page_relases_list{
+		display: flex;
+		flex-wrap: wrap;
+		.box_relases{
+			flex-basis: 10%;
+			max-width: 150px;
+			padding-bottom: 15px;
+			margin-right: calc(10%/8);
+			&:nth-of-type(9n+9){
+				margin-right: 0;
+			}
+			img{
+				padding-bottom: 5px;
+			}
+			.text_wrapper{
+				text-align: center;
+				.title{
+					@include flProperty("font-size", 14px, 16px, 320px, 1920px);
+					padding-bottom: 5px;
+				}
+				.year_relases{
+					font-weight: 300;
+					@include flProperty("font-size", 12px, 14px, 320px, 1920px);
+				}
+			}
+		}
+	}
+}

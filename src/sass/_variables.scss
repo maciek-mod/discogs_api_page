@@ -1,0 +1,48 @@
+$col1: 8.33%;
+$col2: 16.66%;
+$col3: 25%;
+$col4: 33.33%;
+$col5: 41.66%;
+$col6: 50%;
+$col7: 58.33%;
+$col8: 66.66%;
+$col9: 75%;
+$col10: 83.33%;
+$col11: 91.66%;
+$col12: 100%;
+
+// --------------------------------------------------
+// VARIABLES
+// --------------------------------------------------
+$theme_red: #ED1C24;
+$theme_blue: #293a6d;
+$theme_black: #363636;
+$theme_pink: #e3bb9d;
+$grey_text: #7f7f7f;
+$grey_text_2: #8b8b8b;
+
+
+$rem_base: 20px;
+$gutter: 1rem;
+$gutter_px: $rem_base;
+
+// $grid_gutter: 1.2rem;
+// $grid_gutter_px: $rem_base+3px;
+
+$scale_hd: 0.75;  //scale factor - create yours, worth using
+$scale_hd_plus: 0.85;
+$page_default_width: 1920px;
+$page_content_width: 1332px;
+
+$header_height: 90px;
+$scale_font: $scale_hd;  //for fonts as refault rem scale
+
+// --------------------------------------------------
+// VARIABLES FOR MIXINS AND GENERAL STUFF
+// --------------------------------------------------
+$size_default: 10px;
+$weight_default: 400;
+$line_height_default: 1.25;
+
+$clip_top_width: $page_default_width; // "largest" media query screen size that fluid mixins are using it as default clipping point. In most cases it's default page width.
+$clip_bottom_width: 480px; //"smallest" media screen query size that fluid mixins are using it as default clipping point.

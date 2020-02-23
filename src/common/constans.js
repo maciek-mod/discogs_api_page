@@ -1,0 +1,1 @@
+export const startFixMenu = 60;

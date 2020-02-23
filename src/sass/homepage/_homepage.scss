@@ -1,0 +1,41 @@
+section.homepage{
+	.homePpge_heading{
+		font-weight: 700;
+		padding-bottom: 30px;
+		@include flProperty("font-size", 18px, 36px, 320px, 1920px);
+	} 
+	.homepage_form{
+		padding-bottom: 30px;
+	}
+	.homepage_search_result{
+		.homepage_search_result_list{
+			display: flex;
+			flex-wrap: wrap;
+			.homepage_search_resultItem{
+                flex-basis: 10%;
+                max-width: 150px;
+                padding-bottom: 15px;
+                margin-right: calc(10%/8);
+                &:nth-of-type(9n+9){ 
+                    margin-right: 0;
+                }
+				a{
+					.img_wrapper{
+						padding-bottom: 5px;
+					}
+                    display: inline-block;
+                    text-decoration: none;
+                    .homepage_search_result_heading{
+                        text-align: center;
+                        color: black;
+                        @include flProperty("font-size", 14px, 18px, 320px, 1920px);
+                    }
+				}
+			}
+		}
+		.homepage_search_result_paragraf{
+			@include flProperty("font-size", 14px, 18px, 320px, 1920px);
+		}
+	}
+}
+
