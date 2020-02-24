@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutPage = props => (
     <section className="about_page">
-        <h2>about page</h2>
-		<p>
+        <h2 className="about_page_heading">About page</h2>
+		<p className="about_page_description">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan
 			ullamcorper sem, quis accumsan enim lobortis ac. Nullam urna nibh, interdum
 			at metus eget, egestas maximus nunc. Class aptent taciti sociosqu ad litora

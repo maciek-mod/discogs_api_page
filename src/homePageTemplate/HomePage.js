@@ -14,13 +14,13 @@ class homePage extends React.Component {
 
     render() {
         return (
-            <section className="homepage">
-                <h2 className="homePpge_heading">Search artist</h2>
-                <form className="homepage_form">
-                    <input className="homepage_form_input" id="artist_input" type="text" placeholder="artist" />
-                    <input className="homepage_form_submit" type="submit" onClick={this.getArtistName.bind(this)} value="Search" />
+            <section className="home_page">
+                <h2 className="home_page_heading">Search artist</h2>
+                <form className="home_page_form">
+                    <input className="home_page_form_input" id="artist_input" type="text" placeholder="artist" />
+                    <input className="home_page_form_submit" type="submit" onClick={this.getArtistName.bind(this)} value="Search" />
                 </form>
-                <div className="homepage_search_result">
+                <div className="home_page_search_result">
                     <HomePageList
                         artistList={this.props.homePageStore.data}
                     />

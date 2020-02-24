@@ -1,0 +1,10 @@
+section.about_page{
+	.about_page_heading{
+		padding-bottom: 30px;
+		@include flProperty("font-size", 14px, 20px, 320px, 1920px);
+	}
+	.about_page_description{
+		line-height: 1.6;
+		@include flProperty("font-size", 12px, 16px, 320px, 1920px);
+	}
+}
