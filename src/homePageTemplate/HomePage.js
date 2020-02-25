@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../store/homePage/actions/homePage';
 import HomePageList from './homePageList';
+import Pagination from '../common/pagination';
+
 
 
 class homePage extends React.Component {
@@ -10,7 +12,7 @@ class homePage extends React.Component {
         event.preventDefault();
         const artistName = document.getElementById("artist_input").value;
         this.props.getHomePageStart(artistName);
-    } 
+    }
 
     render() {
         return (
@@ -25,6 +27,10 @@ class homePage extends React.Component {
                         artistList={this.props.homePageStore.data}
                     />
                 </div>
+                <Pagination 
+                    dataPagination = {this.props.homePageStore.data}
+                    getArtistList = {this.props.getHomePageStart.bind(this)}
+                />
             </section>
         )
     }
@@ -39,7 +45,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getHomePageStart: (artist) => dispatch(actions.getHomePageStart(artist))
+        getHomePageStart: (artist, urlRequest) => dispatch(actions.getHomePageStart(artist, urlRequest))
     }
 }
 

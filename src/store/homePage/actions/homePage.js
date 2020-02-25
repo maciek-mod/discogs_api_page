@@ -1,9 +1,10 @@
 import * as constants from '../constants';
 
-export function getHomePageStart(artist) { 
+export function getHomePageStart(artist, urlRequest) { 
     return {
         type: constants.HOMEPAGE_GET_START,
-        artist
+        artist,
+        urlRequest
     }
 }
 

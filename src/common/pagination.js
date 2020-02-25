@@ -27,4 +27,3 @@ const Pagination = (props) => (
 );
 
 export default Pagination;
-{/* <li><a href="/">1</a></li> */}

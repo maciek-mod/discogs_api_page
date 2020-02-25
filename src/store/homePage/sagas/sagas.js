@@ -3,11 +3,15 @@ import * as constants from '../constants';
 import { call, put, takeEvery } from "redux-saga/effects";
 
 export function* getData(action) { 
-    const {artist} = action;
+    const {artist, urlRequest} = action;
+    let url = `https://api.discogs.com/database/search?q=${artist}&key=CdvsbTeYizKEhAlIlsgw&secret=hQFqliSpdhweVGOrzJgEgqBgAXVHMsun&type=artist`;
+    if(urlRequest !== undefined){
+        url = urlRequest;
+    }
     try {
         const response = yield call(
             fetch,
-            `https://api.discogs.com/database/search?q=${artist}&key=CdvsbTeYizKEhAlIlsgw&secret=hQFqliSpdhweVGOrzJgEgqBgAXVHMsun&type=artist`
+            url
         );
         const data = yield response.json(); 
         yield put(actions.getHomePageSuccess(data));
