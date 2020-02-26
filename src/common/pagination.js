@@ -7,8 +7,8 @@ const Pagination = (props) => (
             {props.dataPagination.pagination.page !== 1 ? 
             (   
                 <>
-                    <li><a onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.first)}}>first</a></li>
-                    <li><a onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.prev)}}>prev</a></li>
+                    <li onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.first)}}>&#60;&#60;</li>
+                    <li onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.prev)}}>&#60;</li>
                 </>
             ): null }
 
@@ -17,8 +17,8 @@ const Pagination = (props) => (
             {props.dataPagination.pagination.urls.last ? 
             (   
                 <>
-                    <li><a onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.next)}}>next</a></li>
-                    <li><a onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.last)}}>last</a></li>
+                    <li onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.next)}}>&#62;</li>
+                    <li onClick={() => {props.getArtistList(null, props.dataPagination.pagination.urls.last)}}>&#62;&#62;</li>
                 </>
             ): null }
 
