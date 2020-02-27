@@ -4,8 +4,6 @@ import * as actions from '../store/homePage/actions/homePage';
 import HomePageList from './homePageList';
 import Pagination from '../common/pagination';
 
-
-
 class homePage extends React.Component {
 
     getArtistName(event){

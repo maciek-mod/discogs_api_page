@@ -3,7 +3,7 @@ import * as constants from '../constants';
 import { call, put, takeEvery } from "redux-saga/effects";
 
 //fetch data artist
-export function* getData(action) { 
+export function* getData(action) {
     const {id} = action;
     try {
         const response = yield call(
@@ -22,12 +22,16 @@ export function* getDataSagaDetailPage() {
 }
 
 //fetch list releases
-export function* getListreleases(action) { 
-    const {id} = action;
+export function* getListreleases(action) {
+    const {id, urlRequest} = action;
+    let url = `https://api.discogs.com/artists/${id}/releases?key=CdvsbTeYizKEhAlIlsgw&secret=hQFqliSpdhweVGOrzJgEgqBgAXVHMsun`;
+    if(urlRequest !== undefined){
+        url = urlRequest;
+    }
     try {
         const response = yield call(
             fetch,
-            `https://api.discogs.com/artists/${id}/releases?key=CdvsbTeYizKEhAlIlsgw&secret=hQFqliSpdhweVGOrzJgEgqBgAXVHMsun`
+            url
         );
         const data = yield response.json(); 
         yield put(actions.getListReleasesSuccess(data));

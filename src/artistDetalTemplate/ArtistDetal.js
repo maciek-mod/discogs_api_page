@@ -3,8 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from '../store/detailPage/actions/detailPage';
 import ArtistDetalDescriptionImg from './artistDetalDescriptionImg';
 import ArtistDetalReleases from './ArtistDetalReleases';
-
-
+import Pagination from '../common/pagination';
 
 class ArtistDetal extends React.Component {
 
@@ -22,7 +21,11 @@ class ArtistDetal extends React.Component {
                     artistImages={this.props.detailPageStore.data.images}
                 />
                 <ArtistDetalReleases 
-                    artistReleases={this.props.detailPageStore.relases.releases}
+                    artistReleases={this.props.detailPageStore.relases}
+                />
+                <Pagination 
+                    dataPagination = {this.props.detailPageStore.relases}
+                    getArtistList = {this.props.getListReleasesStart.bind(this)}
                 />
             </section>
         )
@@ -38,7 +41,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         getDetailPageStart: (id) => dispatch(actions.getDetailPageStart(id)),
-        getListReleasesStart: (id) => dispatch(actions.getListReleasesStart(id))
+        getListReleasesStart: (id, urlRequest) => dispatch(actions.getListReleasesStart(id, urlRequest))
     }
 }
 

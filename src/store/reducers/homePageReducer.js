@@ -1,7 +1,7 @@
 import * as constants from '../homePage/constants'; 
 
 const initialState = {
-    data: null,
+    data: {},
     error: false,
     isError: false,
     isLoading: true

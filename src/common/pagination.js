@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 
 const Pagination = (props) => (
-	props.dataPagination ? (
+	props.dataPagination.pagination ? (
 		<ul className="pagination_wrapper">
-
             {props.dataPagination.pagination.page !== 1 ? 
             (   
                 <>
@@ -25,5 +26,10 @@ const Pagination = (props) => (
 		</ul>
     ) : null
 );
+
+Pagination.propTypes = { 
+    dataPagination: PropTypes.object,
+    getArtistList: PropTypes.func
+};
 
 export default Pagination;

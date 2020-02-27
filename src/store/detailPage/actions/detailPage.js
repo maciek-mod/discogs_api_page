@@ -27,10 +27,11 @@ export function getDetailPageError(error) {
 }
 
 //list releases
-export function getListReleasesStart(id) { 
+export function getListReleasesStart(id, urlRequest) { 
     return {
         type: constants.LISTRELEASES_GET_START,
-        id
+        id,
+        urlRequest
     }
 }
 

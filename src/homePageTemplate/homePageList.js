@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const HomePageList = (props) => (
 	
-	props.artistList ? (
+	props.artistList.results ? (
 		<ul className="home_page_search_result_list">
 			{
 				props.artistList.results.map( item =>
